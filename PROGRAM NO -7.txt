@@ -1,0 +1,30 @@
+PROGRAM NO -7
+OBJECTIVE:
+To find the binomial co-efficient C(n, k),
+
+PROCEDURE: 
+1. Create: Open Dev C++, write a program after that save the program with .c extension. 
+2. Compile: Alt + F9 
+3. Execute: Ctrl + F10 
+SOURCE CODE:
+
+#include <stdio.h>
+#include<conio.h>
+// Returns value of Binomial Coefficient C(n, k)
+int binomialCoeff(int n, int k)
+{
+// Base Casesif (k > n)
+return 0;
+if (k == 0 || k == n)return 1;
+// Recur
+return binomialCoeff(n - 1, k - 1)+ binomialCoeff(n - 1, k);
+}
+/* Driver program to test above 
+function*/int main()
+{
+int n = 5, k= 2;
+clrscr();
+printf("Value of C(%d, %d) is %d ", n, k,
+binomialCoeff(n, k));
+return 0;
+}
