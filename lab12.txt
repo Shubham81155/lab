@@ -1,0 +1,14 @@
+<?php
+function generateCaptcha($length) {
+ // Generate a random alphanumeric string of the specified length
+
+$characters='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567
+89';
+ $captcha='';
+ for($i=0;$i<$length;$i++) {
+ $captcha .=$characters[rand(0,strlen($characters)-1)];
+ }
+ echo "Captcha: $captcha";
+}
+$captchaCode=generateCaptcha(6);
+?>

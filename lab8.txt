@@ -1,0 +1,11 @@
+<?php
+$days=array(0=>"blue",1=>"green", 2=>"red", 3=>"purple", 4=>"yellow", 5=>"cyan",
+6=>"orange");
+$today = date('w');
+ $defaultColor = '#FFFFFF';
+ if (array_key_exists($today, $days)) {
+ echo '<body style="background-color:' . $days[$today] . '">';
+ } else {
+ return $defaultColor;
+ }
+?>
